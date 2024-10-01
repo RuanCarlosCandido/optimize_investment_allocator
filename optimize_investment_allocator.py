@@ -12,6 +12,8 @@ def calculate_and_update_contribution(csv_file_path, new_contribution):
     df['ProporcaoIdeal'] = df['ProporcaoIdeal'].astype(float)
 
     total_current_investment = df['ValorInvestido'].sum()
+    print(f"Soma atual dos investimentos: {total_current_investment}")
+
     total_future_investment = total_current_investment + new_contribution
 
     # Directly calculating and updating 'Aporte' without 'AporteCalculado' column
@@ -24,6 +26,9 @@ def calculate_and_update_contribution(csv_file_path, new_contribution):
 
     # Update the original CSV file with the new 'Aporte' values
     df.to_csv(csv_file_path, columns=['Tipo', 'Subtipo', 'ValorInvestido', 'ProporcaoIdeal', 'Aporte'], index=False)
+    
+    # Printing total future investment after updates
+    print(f"Soma dos investimentos após o novo aporte: {total_future_investment}")
 
     return df[['Tipo', 'Subtipo', 'ValorInvestido', 'ProporcaoIdeal', 'Aporte']]
 
