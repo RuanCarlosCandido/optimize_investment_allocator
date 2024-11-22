@@ -1,6 +1,3 @@
 Tipo,Subtipo,ValorInvestido,ProporcaoIdeal,Aporte
-Renda Fixa,Tesouro Direto,100,0.25,
-Renda Fixa,Poupança,100,0.25,
-Renda Variavel,Fundos Imobiliários,100,0.1,
-Renda Variavel,Ações,100,0.25,
-Renda Variavel,Bitcoin,100,0.15,
+Reserva,Bitcoin,118000.0,0.7,64577.5
+Renda,Ações,58825.0,0.3,19422.5
